@@ -1,0 +1,23 @@
+
+body {
+  margin: 0;
+  padding: 0;
+}
+div {
+  margin: 5px;
+  padding: 0;
+  text-align: center;
+  background-color: beige;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+.gallery img{
+  width: 200;
+  height: 200;
+}
+
+.contact-us {
+  text-align: center;
+}
+
