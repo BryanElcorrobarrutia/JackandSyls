@@ -465,7 +465,7 @@ a:active {
   }
 
 }
-@media (max-width: 560px){
+@media (max-width: 570px){
   #foot {
     flex-direction: column;
   }
@@ -503,6 +503,15 @@ a:active {
 
   .iteminfo {
     padding: 20px 30px;
+  }
+  .menulist {
+    justify-content: center;
+  }
+  .midsection p{
+    text-align: center;
+  }
+  .midsection2 p{
+    text-align: center;
   }
 }
 
