@@ -12,6 +12,9 @@ body {
    z-index: -4;
 
 }
+a {
+  color: inherit;
+}
 #wrapper {
   display: grid;  
   grid-template-rows: auto 150px auto auto auto auto auto auto auto;
@@ -34,7 +37,7 @@ body {
   box-shadow:         0 1px 3px 1px #ccc;
   z-index: 1;
   grid-column: 1 / -1;
-  padding: 0 60px;
+  padding: 0 70px;
 }
 #nav p{
   padding: 10px;
@@ -452,7 +455,7 @@ a:active {
     width: 200px;
   }
 }
-@media (max-width: 350px){
+@media (max-width: 450px){
   #nav {
     flex-direction: column;
     padding-bottom: 5px;
