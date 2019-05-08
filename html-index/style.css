@@ -1,41 +1,526 @@
-html {
-  font-size: 10px;
-  font-family: 'Open Sans', sans-serif;
-}
-
-
-h1 {
-  font-size: 60px;
-  text-align: center;
-}
-
-p, li {
-  font-size: 16px;  
-  line-height: 2;
-  letter-spacing: 1px;
-}
-
 
 html {
-  background-color: #00539F;
+  background-color: #FFFFFF;
+}
+header, p, div, body, img {
+  margin: 0;
+  padding: 0;
 }
 
 body {
+   background-image: url("../images/yoinkdots.png");
+   z-index: -4;
+
+}
+#wrapper {
+  display: grid;  
+  grid-template-rows: auto 150px auto auto auto auto auto auto auto;
+  grid-template-columns: repeat(12, 1fr);
+}
+.wave-sep{
+  background: url("../images/wave-border.png") repeat-x bottom;
+  grid-column: 1 / -1;
+  height: 15px;
+}
+/*---------------------------------------------------------------------- NAV */
+
+#nav {
+  display: flex;
+  background-color: white;
+  align-items: center;
+
+  -moz-box-shadow:    0 1px 3px 1px #ccc;
+  -webkit-box-shadow: 0 1px 3px 1px #ccc;
+  box-shadow:         0 1px 3px 1px #ccc;
+  z-index: 1;
+  grid-column: 1 / -1;
+  padding: 0 60px;
+}
+#nav p{
+  padding: 10px;
+  font-size: 0.8em;
+  font-family: "lato";
+  color: rgba(247, 177, 203);
+}
+
+#nav > p:nth-child(1) {
+  color: #79B7C4;
+}
+
+#nav a {
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+}
+.facebooklogo {
+  margin-left: auto;
+}
+
+.logo32 {
+  width: 25px;
+  padding: 3px;
+  margin: auto;
+}
+
+
+/*---------------------------------------------------------------------- LOGOBOX */
+#logobox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FEF2F7;
+  grid-column: 1 / -1;
+}
+
+#logobox div {
+  flex-basis: 1px;
+  background-color: red;
+}
+
+#logobox img {
+  width: 350px;
+}
+
+.wave-sep-bot {
+  background: url("../images/wave-border-bot.png") repeat-x bottom;
+  grid-column: 1 / -1;
+  height: 20px;
+}
+/*---------------------------------------------------------------------- FOOTER */
+#foot {
+  height: auto;
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  padding: 40px 60px;
+  justify-content: space-between;
+  background-color: #F7B1CB;
+  /*padding: 20px 30px 15px 30px;*/
+
+  font-family: "lato";
+  color: white;
+}
+
+#logofoot { 
+  display: flex;
+  flex-direction: column;
+  }
+#logofoot p:nth-child(1) {
+  font-size: 3em;
+  font-family: 'Emilys Candy', cursive;
+}
+
+.contactinfo {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+.socialmedia {
+  display: flex;
+}
+/*style="margin-left: 5px; 
+margin-right: 5px; 
+padding-top: 5px;
+width: 25px; 
+height: 25px;*/
+/*
+style="padding-top: 5px; width: 25px; height: 25px;"
+*/
+/*
+style = "margin-left: auto;"
+*/
+/*---------------------------------------------------------------------- SHOWCASE*/
+/*.midsection {
+  grid-column: 1 / -1;
+  padding: 15px 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.midsection p {
+  font-size: 2.5em;
+  text-align: center;
+  font-family: 'Emilys Candy', cursive;
+  color: #333333;
+}
+.linebreak {
+  width: 50%;
+  color: #79B7C4;
+}
+*/
+
+#showcase {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-column: 1 / -1;
+}
+
+.showitems{
+  padding: 10px 35px;
+  width: 250px;
+}
+
+.showitemsinfo {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "lato";
+  font-weight: bold;
+  font-size: 1.3em;
+  color: #333333;
+}
+
+/*---------------------------------------------------------------------- OTHER, midsection */
+.midsection2 {
+  grid-column: 1 / -1;
+  padding: 10px 70px;
+  color: #333333;
+}
+.midsection2 p {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: left;
+  font-family: 'lato', sans-serif;
+  /*font-family: 'Emilys Candy', cursive;*/
+  color: #333333;
+
+}
+/*.linebreak2 {
+
+width: 50%;  
+  color:  #F7B1CB;
+
+}
+*/
+
+/*---------------------------------------------------------------------- MOREbutton */
+.morebutton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Bahnschrift";
+  background-color: #F7B1CB;
+  color: white;
+  width: 100px;
+  height: 40px;
+  grid-column: 1 / -1;
+  font-size: 1.5em;
+  margin: 20px auto;
+  border-radius: 5px;
+}
+
+/*---------------------------------------------------------------------- Navbar links */
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+}
+
+
+/*---------------------------------------------------------------------- Aboutus stuff */
+#aboutus {
+  padding: 0 70px;
+  grid-column: 1 / -1;
+  margin-bottom: 20px;
+  color: #333333;
+  font-family: "lato";
+}
+.jacknsyl{
+  width: 250px;
+  float: right;
+  margin: 20px;
+  border: 5px white solid;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-sizing: border-box;
+}
+
+/*---------------------------------------------------------------------- Form styles */
+#form {
+  grid-column: 1 / -1;
+  font-family: "lato";
+  color: #333333;
+  font-size: 1.3em;
+}
+.contactform {
+  padding: 0 70px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(5,1fr);
+  grid-template-rows: repeat(5, a);
+  grid-column: 1 / -1;
+  margin-bottom: 20px;
+}
+
+.smallin {
+  height: 20px;
+  grid-column: span 4;
   width: 600px;
-  margin: 0 auto;
-  background-color: #FF9500;
-  padding: 0 20px 20px 20px;
-  border: 5px solid black;
+  border-radius: 5px;
+}
+.bigin {
+  height: 100px;
+  width: 600px;
+  grid-column: span 4;
+  border-radius: 5px;
 }
 
-h1 {
-  margin: 0;
-  padding: 20px 0;  
-  color: #00539F;
-  text-shadow: 3px 3px 1px black;
+#formbutton {
+  line-height: 33px;
+  border-radius: 5px;
+  font-size: 0.9em;
+  text-align: center;
+  font-family: "Bahnschrift";
+  color: white;
+
+  margin-top: 10px;
+  background-color: #F7B1CB;
+  border: none;
+  grid-column: span 5;
+  width: 100px;
+  height: 30px;
 }
 
-img {
-  display: block;
-  margin: 0 auto;
+#formcentered{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/*----------------------------------------------------------------------  MENU*/
+.backbar {
+  display: flex;
+  align-items: center;
+  grid-column: 1 / -1;
+}
+.backbar a {
+  height: 30px;
+}
+.backbar img{
+  width: 30px;
+}
+
+.backbar img:hover{
+
+}
+.backbar p {
+  margin-left: 10px;
+}
+
+.menulist {
+  padding: 0 60px;
+  display: flex;
+  flex-direction: row;
+  grid-column: 1/-1;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  font-family: "LATO";
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.menulist > a {
+  height: 344px;
+  width: 258px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #333333;
+  cursor: pointer;
+}
+
+
+
+.infobar {
+  width: 100%;
+  height: 50px;
+  background-color: rgba(255,255,255,0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#alfajores {
+     background-image: url("../instagram-photos/origalfa.jpg");
+}
+
+#originalalfajores {
+  background-image: url("../instagram-photos/origalfa.jpg");
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.2s ease;
+}
+
+#chocolatealfajores{
+  background-image: url("../instagram-photos/chocoalfa.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#whitealfajores{
+  background-image: url("../instagram-photos/whitealfa.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#cocoalfajores{
+  background-image: url("../instagram-photos/cocoalfajores.jpg");
+  background-size: cover;
+  background-position: center;
+}
+#alfajores {
+  background-image: url("../instagram-photos/alfajores.jpg");
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.2s ease;
+}
+ 
+#churros {
+  background-image: url("../instagram-photos/churros.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#cakes {
+  background-image: url("../instagram-photos/cakestrawberry.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+/*---------------------------------------------------------------------- MENU*/
+.iteminfo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-column: 1 / -1;
+  padding: 0 70px;
+  color: #333333;
+  font-family: "lato";
+  margin-bottom: 20px;
+}
+
+.iteminfo div p {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+}
+.iteminfo > div > img{
+  width: 350px;
+  border-style: solid;
+  border-color: #EEEEEE;
+  border-width: 20px;
+}
+.iteminfo div {
+    margin: 20px 0;
+}
+.iteminfo > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/*---------------------------------------------------------------*/
+@media (max-width: 400px){
+  #logobox img {
+    width: 250px;
+  } 
+  #showcase {
+    padding-top: 10px;
+  }
+  .showitems{
+    width: 200px;
+  }
+}
+@media (max-width: 350px){
+  #nav {
+    flex-direction: column;
+    padding-bottom: 5px;
+  }
+  .facebooklogo {
+    margin: 0;
+  }
+
+}
+@media (max-width: 560px){
+  #foot {
+    flex-direction: column;
+  }
+  #logofoot {
+    text-align: center;
+  }
+  .contactinfo {
+    text-align: center;
+  }
+  #foot p{
+    margin-top: 10px;
+  }
+  .socialmedia {
+    margin-top: 10px;
+  }
+
+  #aboutus {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .jacknsyl {
+    margin: 0;
+    margin-bottom: 20px;
+    width: 220px;
+  }
+  .iteminfo > div > img{
+    width: 270px;
+    border-style: solid;
+    border-color: #EEEEEE;
+    border-width: 20px;
+  }
+
+  .iteminfo {
+    padding: 20px 30px;
+  }
+}
+
+@media (max-width: 400px){
+  .jacknsyl {
+    margin: 0;
+    margin-bottom: 20px;
+    width: 190px;
+  }
+}
+@media (max-width: 1180px){
+  .menulist > a {
+    width: 198px;
+    height: 264px;
+  }
+  .menulistalfa > a{
+    width: 198px;
+    height: 264px;
+  }
+  .menulistchurros > a{
+    width: 198px;
+    height: 264px;
+  }
 }
