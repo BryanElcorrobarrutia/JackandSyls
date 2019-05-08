@@ -47,17 +47,27 @@
         </div>
         <section id = "form">
             <form class = "contactform" action="https://formspree.io/jackandsyls@gmail.com" method="POST">
-              <label for="name">Name:</label>
-              <input class = "smallin" type="text" name="Name">
-              <label for="mail">Email Address:</label>
-              <input class = "smallin" type="Email" name="user_mail">
-              <label for="heard from">Where did you hear about us?</label>
-              <textarea class = "bigin" name="heard from"></textarea>
-              <label for="msg">How can we help you?</label>
-              <div id = "formcentered">
-                <textarea class = "bigin" name="user_message"></textarea>
-                <button  id = "formbutton" type="submit">SEND</button> 
+              <div>
+                <label for="name">Name:</label>
+                <input class = "smallin" type="text" name="Name">
               </div>
+              <div>
+                <label for="mail">Email Address:</label>
+                <input class = "smallin" type="Email" name="user_mail">
+              </div>
+              <div>
+                <label for="heard from">Where did you hear about us?</label>
+                <textarea class = "bigin" name="heard from"></textarea>
+              </div>
+              <div>
+                <label for="msg">How can we help you?</label>
+                <div id = "button-textarea">
+                  <textarea class = "innerbig" name="user_message"></textarea> 
+                  <button  id = "formbutton" type="submit">SEND</button>
+                </div>
+              </div>
+            </form>
+          
         </section>
 
 

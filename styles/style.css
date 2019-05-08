@@ -37,7 +37,7 @@ a {
   box-shadow:         0 1px 3px 1px #ccc;
   z-index: 1;
   grid-column: 1 / -1;
-  padding: 0 70px;
+  padding: 0 60px;
 }
 #nav p{
   padding: 10px;
@@ -258,45 +258,52 @@ a:active {
   grid-column: 1 / -1;
   font-family: "lato";
   color: #333333;
-  font-size: 1.3em;
+  font-size: 1.1em;
 }
-.contactform {
+.contactform > div{
   padding: 0 70px;
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(5,1fr);
-  grid-template-rows: repeat(5, a);
-  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-start;
   margin-bottom: 20px;
 }
-
+.contactform > div > label {
+  width: 150px;
+  margin-right: 5px;
+}
 .smallin {
-  height: 20px;
-  grid-column: span 4;
-  width: 600px;
   border-radius: 5px;
+  flex-shrink: : 1;
+  flex-basis: 300px;
 }
 .bigin {
   height: 100px;
-  width: 600px;
-  grid-column: span 4;
   border-radius: 5px;
+  flex-shrink: 1;
+  flex-basis: 300px;
+  height: 130px;
 }
 
+.innerbig {
+  height: 100px;
+  border-radius: 5px;
+  height: 130px;
+}
+#button-textarea {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 306px;
+}
 #formbutton {
-  line-height: 33px;
   border-radius: 5px;
   font-size: 0.9em;
-  text-align: center;
   font-family: "Bahnschrift";
   color: white;
-
-  margin-top: 10px;
   background-color: #F7B1CB;
   border: none;
-  grid-column: span 5;
   width: 100px;
   height: 30px;
+  margin: auto;
+
 }
 
 #formcentered{
@@ -359,7 +366,7 @@ a:active {
   align-items: center;
 }
 
-
+/*------------------------------------------------------------------ BACKGROUND IMAGES*/
 #alfajores {
      background-image: url("../instagram-photos/origalfa.jpg");
 }
@@ -409,7 +416,7 @@ a:active {
 
 
 
-/*---------------------------------------------------------------------- MENU*/
+/*---------------------------------------------------------------------- ITEM INFO*/
 .iteminfo{
   display: flex;
   flex-direction: column;
@@ -443,7 +450,7 @@ a:active {
   text-align: center;
 }
 
-/*---------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
 @media (max-width: 400px){
   #logobox img {
     width: 250px;
@@ -534,5 +541,25 @@ a:active {
   .menulistchurros > a{
     width: 198px;
     height: 264px;
+  }
+}
+
+@media (max-width: 450px){
+  #form {
+    margin: auto;
+
+  }
+  .contactform > div {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+  .bigin {
+    flex: 1;
+  }
+  .smallin {
+    flex: 1;
+  }
+  .innerbig {
+    flex:1;
   }
 }
