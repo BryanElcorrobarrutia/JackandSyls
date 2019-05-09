@@ -3,7 +3,7 @@ function expand_menu(){
 	let getNavBar = document.querySelector("#nav-aside");
 	let getNavBarChildren = document.querySelectorAll("#nav-aside p");
 	if (flag === false) {
-		getNavBar.style.height = "140px";
+		getNavBar.style.height = "145px";
 		getNavBar.style.visibility = "visible";
 		flag = true;
 
@@ -13,7 +13,7 @@ function expand_menu(){
 		}
 	}
 	else {
-		getNavBar.style.height = "36px";
+		getNavBar.style.height = "0";
 		getNavBar.style.visibility = "hidden";
 		flag = false;
 
